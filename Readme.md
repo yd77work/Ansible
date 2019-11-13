@@ -59,40 +59,52 @@ Usage:
 INSTALL nginx:
 
 ansible-playbook nginx_tags.yml --tags "install_centos" -K
+
 ansible-playbook nginx_tags.yml --tags "install_debian" -K
+
 ansible-playbook nginx_tags.yml --tags "install_freebsd" -K
 
 
 START nginx:
 
 ansible-playbook nginx_tags.yml --tags "start_nginx_centos" -K
+
 ansible-playbook nginx_tags.yml --tags "start_nginx_debian" -K
+
 ansible-playbook nginx_tags.yml --tags "start_nginx_freebsd" -K
 
 
 RESTART nginx:
 
 ansible-playbook nginx_tags.yml --tags "restart_nginx_centos" -K
+
 ansible-playbook nginx_tags.yml --tags "restart_nginx_debian" -K
+
 ansible-playbook nginx_tags.yml --tags "restart_nginx_freebsd" -K
 
 
 STOP nginx:
 
 ansible-playbook nginx_tags.yml --tags "stop_nginx_centos" -K
+
 ansible-playbook nginx_tags.yml --tags "stop_nginx_debian" -K
+
 ansible-playbook nginx_tags.yml --tags "stop_nginx_freebsd" -K
 
 
 INSTALL zip/unzip/gzip/nano:
 
 ansible-playbook zipnano_tags.yml --tags "install_centos" -K
+
 ansible-playbook zipnano_tags.yml --tags "install_debian" -K
+
 ansible-playbook zipnano_tags.yml --tags "install_freebsd" -K
 
 
 UNINSTALL unzip/nano:
 
 ansible-playbook zipnano_tags.yml --tags "uninstall_centos" -K
+
 ansible-playbook zipnano_tags.yml --tags "uninstall_debian" -K
+
 ansible-playbook zipnano_tags.yml --tags "uninstall_freebsd" -K
