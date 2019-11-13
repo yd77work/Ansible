@@ -1,0 +1,31 @@
+2019-11-12 23:28:02,187 p=22631 u=yd |  PLAY [Install nginx on different VM's] ***********************************************************************************
+2019-11-12 23:28:02,237 p=22631 u=yd |  TASK [Gathering Facts] ***************************************************************************************************
+2019-11-12 23:28:09,664 p=22631 u=yd |  ok: [yd-ubuntu]
+2019-11-12 23:28:11,879 p=22631 u=yd |  ok: [ydBSD]
+2019-11-12 23:28:12,459 p=22631 u=yd |  ok: [centos7]
+2019-11-12 23:28:12,510 p=22631 u=yd |  TASK [nginx : Install epel] **********************************************************************************************
+2019-11-12 23:28:12,648 p=22631 u=yd |  skipping: [ydBSD]
+2019-11-12 23:28:12,726 p=22631 u=yd |  skipping: [yd-ubuntu]
+2019-11-12 23:28:16,446 p=22631 u=yd |  ok: [centos7]
+2019-11-12 23:28:16,490 p=22631 u=yd |  TASK [nginx : Install nginx CentOS] **************************************************************************************
+2019-11-12 23:28:16,602 p=22631 u=yd |  skipping: [ydBSD]
+2019-11-12 23:28:16,705 p=22631 u=yd |  skipping: [yd-ubuntu]
+2019-11-12 23:28:40,419 p=22631 u=yd |  changed: [centos7]
+2019-11-12 23:28:40,461 p=22631 u=yd |  TASK [nginx : Install nginx Debian/Ubuntu] *******************************************************************************
+2019-11-12 23:28:40,587 p=22631 u=yd |  skipping: [ydBSD]
+2019-11-12 23:28:40,734 p=22631 u=yd |  skipping: [centos7]
+2019-11-12 23:28:56,339 p=22631 u=yd |  changed: [yd-ubuntu]
+2019-11-12 23:28:56,385 p=22631 u=yd |  TASK [nginx : Install nginx FreeBSD] *************************************************************************************
+2019-11-12 23:28:56,619 p=22631 u=yd |  skipping: [yd-ubuntu]
+2019-11-12 23:28:56,718 p=22631 u=yd |  skipping: [centos7]
+2019-11-12 23:29:06,638 p=22631 u=yd |  changed: [ydBSD]
+2019-11-12 23:29:06,648 p=22631 u=yd |  RUNNING HANDLER [nginx : restart nginx] **********************************************************************************
+2019-11-12 23:29:10,020 p=22631 u=yd |  fatal: [ydBSD]: FAILED! => {"changed": false, "msg": "unable to set rcvar using sysrc", "stderr": "/usr/sbin/sysrc: cannot create /etc/rc.conf: Permission denied\n", "stderr_lines": ["/usr/sbin/sysrc: cannot create /etc/rc.conf: Permission denied"], "stdout": "", "stdout_lines": []}
+2019-11-12 23:29:10,023 p=22631 u=yd |  NO MORE HOSTS LEFT *******************************************************************************************************
+2019-11-12 23:29:10,028 p=22631 u=yd |   [WARNING]: Could not create retry file '/etc/ansible/nginx.retry'.         [Errno 13] Permission denied:
+'/etc/ansible/nginx.retry'
+
+2019-11-12 23:29:10,031 p=22631 u=yd |  PLAY RECAP ***************************************************************************************************************
+2019-11-12 23:29:10,033 p=22631 u=yd |  centos7                    : ok=3    changed=1    unreachable=0    failed=0   
+2019-11-12 23:29:10,035 p=22631 u=yd |  yd-ubuntu                  : ok=2    changed=1    unreachable=0    failed=0   
+2019-11-12 23:29:10,037 p=22631 u=yd |  ydBSD                      : ok=2    changed=1    unreachable=0    failed=1   

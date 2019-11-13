@@ -1,0 +1,42 @@
+---
+- name: Install zip, unzip, gzip, nano on different VM's
+  hosts: all
+  roles:
+    - zipponano
+
+- hosts: freebsd-servers
+  become:
+    true
+  become_method:
+    su
+  become_user:
+    root
+  remote_user:
+    yd
+  roles:
+   - zipponano
+
+
+- hosts: redhat-servers
+  become:
+    true
+  become_method:
+    su
+  become_user:
+    root
+  remote_user:
+    yd
+  roles:
+   - zipponano
+
+- hosts: debian-servers
+  become:
+    true
+  become_method:
+    sudo
+  become_user:
+    root
+  remote_user:
+    yd
+  roles:
+   - zipponano

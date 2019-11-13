@@ -1,0 +1,119 @@
+2019-11-13 00:22:23,523 p=23938 u=yd |  PLAY [Install zip, unzip, gzip, nano on different VM's] ******************************************************************
+2019-11-13 00:22:23,588 p=23938 u=yd |  TASK [Gathering Facts] ***************************************************************************************************
+2019-11-13 00:22:31,047 p=23938 u=yd |  ok: [yd-ubuntu]
+2019-11-13 00:22:33,802 p=23938 u=yd |  ok: [centos7]
+2019-11-13 00:22:34,071 p=23938 u=yd |  ok: [ydBSD]
+2019-11-13 00:22:34,132 p=23938 u=yd |  TASK [zipponano : Install zip/unzip/gzip/nano CentOS] ********************************************************************
+2019-11-13 00:22:34,203 p=23938 u=yd |  [DEPRECATION WARNING]: Invoking "yum" only once while using a loop via squash_actions is deprecated. Instead of using a 
+loop to supply multiple items and specifying `name: "{{ item }}"`, please use `name: ['zip', 'unzip', 'gzip', 'nano']` 
+and remove the loop. This feature will be removed in version 2.11. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2019-11-13 00:22:34,356 p=23938 u=yd |  [DEPRECATION WARNING]: Invoking "yum" only once while using a loop via squash_actions is deprecated. Instead of using a 
+loop to supply multiple items and specifying `name: "{{ item }}"`, please use `name: ['zip', 'unzip', 'gzip', 'nano']` 
+and remove the loop. This feature will be removed in version 2.11. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2019-11-13 00:22:34,392 p=23938 u=yd |  skipping: [ydBSD] => (item=[]) 
+2019-11-13 00:22:34,452 p=23938 u=yd |  [DEPRECATION WARNING]: Invoking "yum" only once while using a loop via squash_actions is deprecated. Instead of using a 
+loop to supply multiple items and specifying `name: "{{ item }}"`, please use `name: ['zip', 'unzip', 'gzip', 'nano']` 
+and remove the loop. This feature will be removed in version 2.11. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2019-11-13 00:22:34,547 p=23938 u=yd |  skipping: [yd-ubuntu] => (item=[]) 
+2019-11-13 00:23:21,016 p=23938 u=yd |  changed: [centos7] => (item=['zip', 'unzip', 'gzip', 'nano'])
+2019-11-13 00:23:21,092 p=23938 u=yd |  TASK [zipponano : Install zip/unzip/gzip/nano Debian/Ubuntu] *************************************************************
+2019-11-13 00:23:21,182 p=23938 u=yd |  [DEPRECATION WARNING]: Invoking "apt" only once while using a loop via squash_actions is deprecated. Instead of using a 
+loop to supply multiple items and specifying `name: "{{ item }}"`, please use `name: ['zip', 'unzip', 'gzip', 'nano']` 
+and remove the loop. This feature will be removed in version 2.11. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2019-11-13 00:23:21,302 p=23938 u=yd |  [DEPRECATION WARNING]: Invoking "apt" only once while using a loop via squash_actions is deprecated. Instead of using a 
+loop to supply multiple items and specifying `name: "{{ item }}"`, please use `name: ['zip', 'unzip', 'gzip', 'nano']` 
+and remove the loop. This feature will be removed in version 2.11. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2019-11-13 00:23:21,350 p=23938 u=yd |  skipping: [ydBSD] => (item=[]) 
+2019-11-13 00:23:21,426 p=23938 u=yd |  [DEPRECATION WARNING]: Invoking "apt" only once while using a loop via squash_actions is deprecated. Instead of using a 
+loop to supply multiple items and specifying `name: "{{ item }}"`, please use `name: ['zip', 'unzip', 'gzip', 'nano']` 
+and remove the loop. This feature will be removed in version 2.11. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2019-11-13 00:23:21,570 p=23938 u=yd |  skipping: [centos7] => (item=[]) 
+2019-11-13 00:23:42,420 p=23938 u=yd |  changed: [yd-ubuntu] => (item=['zip', 'unzip', 'gzip', 'nano'])
+2019-11-13 00:23:42,469 p=23938 u=yd |  TASK [zipponano : Install zip/unzip/gzip/nano FreeBSD] *******************************************************************
+2019-11-13 00:23:42,583 p=23938 u=yd |  [DEPRECATION WARNING]: Invoking "pkgng" only once while using a loop via squash_actions is deprecated. Instead of using a
+ loop to supply multiple items and specifying `name: "{{ item }}"`, please use `name: ['zip', 'unzip', 'gzip', 'nano']` 
+and remove the loop. This feature will be removed in version 2.11. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2019-11-13 00:23:42,714 p=23938 u=yd |  [DEPRECATION WARNING]: Invoking "pkgng" only once while using a loop via squash_actions is deprecated. Instead of using a
+ loop to supply multiple items and specifying `name: "{{ item }}"`, please use `name: ['zip', 'unzip', 'gzip', 'nano']` 
+and remove the loop. This feature will be removed in version 2.11. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2019-11-13 00:23:42,843 p=23938 u=yd |  skipping: [yd-ubuntu] => (item=[]) 
+2019-11-13 00:23:42,853 p=23938 u=yd |  [DEPRECATION WARNING]: Invoking "pkgng" only once while using a loop via squash_actions is deprecated. Instead of using a
+ loop to supply multiple items and specifying `name: "{{ item }}"`, please use `name: ['zip', 'unzip', 'gzip', 'nano']` 
+and remove the loop. This feature will be removed in version 2.11. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2019-11-13 00:23:42,960 p=23938 u=yd |  skipping: [centos7] => (item=[]) 
+2019-11-13 00:24:04,706 p=23938 u=yd |  changed: [ydBSD] => (item=['zip', 'unzip', 'gzip', 'nano'])
+2019-11-13 00:24:04,781 p=23938 u=yd |  TASK [zipponano : Deinstall zip/nano CentOS] *****************************************************************************
+2019-11-13 00:24:04,873 p=23938 u=yd |  [DEPRECATION WARNING]: Invoking "yum" only once while using a loop via squash_actions is deprecated. Instead of using a 
+loop to supply multiple items and specifying `name: "{{ item }}"`, please use `name: ['unzip', 'nano']` and remove the 
+loop. This feature will be removed in version 2.11. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2019-11-13 00:24:04,972 p=23938 u=yd |  [DEPRECATION WARNING]: Invoking "yum" only once while using a loop via squash_actions is deprecated. Instead of using a 
+loop to supply multiple items and specifying `name: "{{ item }}"`, please use `name: ['unzip', 'nano']` and remove the 
+loop. This feature will be removed in version 2.11. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2019-11-13 00:24:05,093 p=23938 u=yd |  skipping: [ydBSD] => (item=[]) 
+2019-11-13 00:24:05,111 p=23938 u=yd |  skipping: [yd-ubuntu] => (item=[]) 
+2019-11-13 00:24:05,156 p=23938 u=yd |  [DEPRECATION WARNING]: Invoking "yum" only once while using a loop via squash_actions is deprecated. Instead of using a 
+loop to supply multiple items and specifying `name: "{{ item }}"`, please use `name: ['unzip', 'nano']` and remove the 
+loop. This feature will be removed in version 2.11. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2019-11-13 00:24:18,976 p=23938 u=yd |  changed: [centos7] => (item=['unzip', 'nano'])
+2019-11-13 00:24:19,025 p=23938 u=yd |  TASK [zipponano : Deinstall zip/nano Debian/Ubuntu] **********************************************************************
+2019-11-13 00:24:19,160 p=23938 u=yd |  [DEPRECATION WARNING]: Invoking "apt" only once while using a loop via squash_actions is deprecated. Instead of using a 
+loop to supply multiple items and specifying `name: "{{ item }}"`, please use `name: ['unzip', 'nano']` and remove the 
+loop. This feature will be removed in version 2.11. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2019-11-13 00:24:19,249 p=23938 u=yd |  [DEPRECATION WARNING]: Invoking "apt" only once while using a loop via squash_actions is deprecated. Instead of using a 
+loop to supply multiple items and specifying `name: "{{ item }}"`, please use `name: ['unzip', 'nano']` and remove the 
+loop. This feature will be removed in version 2.11. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2019-11-13 00:24:19,314 p=23938 u=yd |  skipping: [ydBSD] => (item=[]) 
+2019-11-13 00:24:19,377 p=23938 u=yd |  [DEPRECATION WARNING]: Invoking "apt" only once while using a loop via squash_actions is deprecated. Instead of using a 
+loop to supply multiple items and specifying `name: "{{ item }}"`, please use `name: ['unzip', 'nano']` and remove the 
+loop. This feature will be removed in version 2.11. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2019-11-13 00:24:19,464 p=23938 u=yd |  skipping: [centos7] => (item=[]) 
+2019-11-13 00:24:34,974 p=23938 u=yd |  changed: [yd-ubuntu] => (item=['unzip', 'nano'])
+2019-11-13 00:24:34,979 p=23938 u=yd |  [DEPRECATION WARNING]: State 'removed' is deprecated. Using state 'absent' instead.. This feature will be removed in 
+version 2.9. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2019-11-13 00:24:35,026 p=23938 u=yd |  TASK [zipponano : Deinstall zip/nano FreeBSD] ****************************************************************************
+2019-11-13 00:24:35,149 p=23938 u=yd |  [DEPRECATION WARNING]: Invoking "pkgng" only once while using a loop via squash_actions is deprecated. Instead of using a
+ loop to supply multiple items and specifying `name: "{{ item }}"`, please use `name: ['unzip', 'nano']` and remove the 
+loop. This feature will be removed in version 2.11. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2019-11-13 00:24:35,252 p=23938 u=yd |  [DEPRECATION WARNING]: Invoking "pkgng" only once while using a loop via squash_actions is deprecated. Instead of using a
+ loop to supply multiple items and specifying `name: "{{ item }}"`, please use `name: ['unzip', 'nano']` and remove the 
+loop. This feature will be removed in version 2.11. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2019-11-13 00:24:35,386 p=23938 u=yd |  skipping: [yd-ubuntu] => (item=[]) 
+2019-11-13 00:24:35,420 p=23938 u=yd |  [DEPRECATION WARNING]: Invoking "pkgng" only once while using a loop via squash_actions is deprecated. Instead of using a
+ loop to supply multiple items and specifying `name: "{{ item }}"`, please use `name: ['unzip', 'nano']` and remove the 
+loop. This feature will be removed in version 2.11. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2019-11-13 00:24:35,558 p=23938 u=yd |  skipping: [centos7] => (item=[]) 
+2019-11-13 00:24:38,715 p=23938 u=yd |  changed: [ydBSD] => (item=['unzip', 'nano'])
+2019-11-13 00:24:38,751 p=23938 u=yd |   [WARNING]: Could not match supplied host pattern, ignoring: freebsd-servers
+
+2019-11-13 00:24:38,760 p=23938 u=yd |  PLAY [freebsd-servers] ***************************************************************************************************
+2019-11-13 00:24:38,761 p=23938 u=yd |  skipping: no hosts matched
+2019-11-13 00:24:38,770 p=23938 u=yd |   [WARNING]: Could not match supplied host pattern, ignoring: redhat-servers
+
+2019-11-13 00:24:38,783 p=23938 u=yd |  PLAY [redhat-servers] ****************************************************************************************************
+2019-11-13 00:24:38,786 p=23938 u=yd |  skipping: no hosts matched
+2019-11-13 00:24:38,799 p=23938 u=yd |   [WARNING]: Could not match supplied host pattern, ignoring: debian-servers
+
+2019-11-13 00:24:38,809 p=23938 u=yd |  PLAY [debian-servers] ****************************************************************************************************
+2019-11-13 00:24:38,811 p=23938 u=yd |  skipping: no hosts matched
+2019-11-13 00:24:38,811 p=23938 u=yd |  PLAY RECAP ***************************************************************************************************************
+2019-11-13 00:24:38,812 p=23938 u=yd |  centos7                    : ok=3    changed=2    unreachable=0    failed=0   
+2019-11-13 00:24:38,813 p=23938 u=yd |  yd-ubuntu                  : ok=3    changed=2    unreachable=0    failed=0   
+2019-11-13 00:24:38,814 p=23938 u=yd |  ydBSD                      : ok=3    changed=2    unreachable=0    failed=0   

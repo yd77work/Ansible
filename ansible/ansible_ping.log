@@ -1,0 +1,12 @@
+2019-11-12 23:26:47,823 p=22548 u=yd |  yd-ubuntu | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2019-11-12 23:26:48,275 p=22548 u=yd |  ydBSD | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2019-11-12 23:26:50,812 p=22548 u=yd |  centos7 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}

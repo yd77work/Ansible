@@ -1,0 +1,71 @@
+---
+- name: Install zip/unzip/gzip/nano CentOS
+  become: yes
+  become_method: sudo
+  yum:
+   name:
+    - zip
+    - unzip
+    - gzip
+    - nano
+   state: latest
+  when: ansible_os_family == "RedHat"
+
+- name: Install zip/unzip/gzip/nano Debian/Ubuntu
+  become: yes
+  become_method: sudo
+  apt:
+   name:
+    - zip
+    - unzip
+    - gzip
+    - nano
+   state: latest
+  when: ansible_os_family == "Debian"
+
+- name: Install zip/unzip/gzip/nano FreeBSD
+  become: yes
+  become_method: su
+  pkgng:
+   name:
+    - zip
+    - unzip
+    - gzip
+    - nano
+   state: latest
+  when: ansible_os_family == "FreeBSD"
+
+
+
+
+
+
+- name: Deinstall zip/nano CentOS
+  become: yes
+  become_method: sudo
+  yum:
+   name:
+    - unzip
+    - nano
+   state: removed
+  when: ansible_os_family == "RedHat"
+
+- name: Deinstall zip/nano Debian/Ubuntu
+  become: yes
+  become_method: sudo
+  apt:
+   name:
+    - unzip
+    - nano
+   state: removed
+  when: ansible_os_family == "Debian"
+
+- name: Deinstall zip/nano FreeBSD
+  become: yes
+  become_method: su
+  pkgng:
+   name:
+    - unzip
+    - nano
+   state: absent
+  when: ansible_os_family == "FreeBSD"

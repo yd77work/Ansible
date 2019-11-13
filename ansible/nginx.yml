@@ -1,0 +1,43 @@
+---
+- name: Install nginx on different VM's
+  hosts: all
+  roles:
+    - nginx
+
+- hosts: freebsd-servers
+  become:
+    true
+  become_method:
+    su
+  become_user:
+    root
+  remote_user:
+    yd
+  roles:
+   - nginx
+
+
+- hosts: redhat-servers
+  become:
+    true
+  become_method:
+    su
+  become_user:
+    root
+  remote_user:
+    yd
+  roles:
+#   - epel
+   - nginx
+
+- hosts: debian-servers
+  become:
+    true
+  become_method:
+    sudo
+  become_user:
+    root
+  remote_user:
+    yd
+  roles:
+   - nginx

@@ -1,0 +1,47 @@
+2019-11-13 00:55:58,390 p=24788 u=yd |  PLAY [Install zip, unzip, gzip, nano on different VM's] ******************************************************************
+2019-11-13 00:55:58,436 p=24788 u=yd |  TASK [Gathering Facts] ***************************************************************************************************
+2019-11-13 00:56:06,856 p=24788 u=yd |  ok: [yd-ubuntu]
+2019-11-13 00:56:08,741 p=24788 u=yd |  ok: [centos7]
+2019-11-13 00:56:09,092 p=24788 u=yd |  ok: [ydBSD]
+2019-11-13 00:56:09,134 p=24788 u=yd |  TASK [zipnano_no_depr : Install zip/unzip/gzip/nano CentOS] **************************************************************
+2019-11-13 00:56:09,322 p=24788 u=yd |  skipping: [ydBSD]
+2019-11-13 00:56:09,326 p=24788 u=yd |  skipping: [yd-ubuntu]
+2019-11-13 00:56:58,875 p=24788 u=yd |  changed: [centos7]
+2019-11-13 00:56:58,924 p=24788 u=yd |  TASK [zipnano_no_depr : Install zip/unzip/gzip/nano Debian/Ubuntu] *******************************************************
+2019-11-13 00:56:59,133 p=24788 u=yd |  skipping: [ydBSD]
+2019-11-13 00:56:59,206 p=24788 u=yd |  skipping: [centos7]
+2019-11-13 00:57:18,678 p=24788 u=yd |  changed: [yd-ubuntu]
+2019-11-13 00:57:18,742 p=24788 u=yd |  TASK [zipnano_no_depr : Install zip/unzip/gzip/nano FreeBSD] *************************************************************
+2019-11-13 00:57:18,953 p=24788 u=yd |  skipping: [yd-ubuntu]
+2019-11-13 00:57:19,028 p=24788 u=yd |  skipping: [centos7]
+2019-11-13 00:57:32,956 p=24788 u=yd |  changed: [ydBSD]
+2019-11-13 00:57:32,999 p=24788 u=yd |  TASK [zipnano_no_depr : Deinstall zip/nano CentOS] ***********************************************************************
+2019-11-13 00:57:33,134 p=24788 u=yd |  skipping: [ydBSD]
+2019-11-13 00:57:33,216 p=24788 u=yd |  skipping: [yd-ubuntu]
+2019-11-13 00:57:45,885 p=24788 u=yd |  changed: [centos7]
+2019-11-13 00:57:45,936 p=24788 u=yd |  TASK [zipnano_no_depr : Deinstall zip/nano Debian/Ubuntu] ****************************************************************
+2019-11-13 00:57:46,056 p=24788 u=yd |  skipping: [ydBSD]
+2019-11-13 00:57:46,226 p=24788 u=yd |  skipping: [centos7]
+2019-11-13 00:58:01,442 p=24788 u=yd |  [DEPRECATION WARNING]: State 'removed' is deprecated. Using state 'absent' instead.. This feature will be removed in 
+version 2.9. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2019-11-13 00:58:01,443 p=24788 u=yd |  changed: [yd-ubuntu]
+2019-11-13 00:58:01,514 p=24788 u=yd |  TASK [zipnano_no_depr : Deinstall zip/nano FreeBSD] **********************************************************************
+2019-11-13 00:58:01,753 p=24788 u=yd |  skipping: [yd-ubuntu]
+2019-11-13 00:58:01,831 p=24788 u=yd |  skipping: [centos7]
+2019-11-13 00:58:05,131 p=24788 u=yd |  changed: [ydBSD]
+2019-11-13 00:58:05,160 p=24788 u=yd |   [WARNING]: Could not match supplied host pattern, ignoring: freebsd-servers
+
+2019-11-13 00:58:05,170 p=24788 u=yd |  PLAY [freebsd-servers] ***************************************************************************************************
+2019-11-13 00:58:05,171 p=24788 u=yd |  skipping: no hosts matched
+2019-11-13 00:58:05,180 p=24788 u=yd |   [WARNING]: Could not match supplied host pattern, ignoring: redhat-servers
+
+2019-11-13 00:58:05,194 p=24788 u=yd |  PLAY [redhat-servers] ****************************************************************************************************
+2019-11-13 00:58:05,195 p=24788 u=yd |  skipping: no hosts matched
+2019-11-13 00:58:05,206 p=24788 u=yd |   [WARNING]: Could not match supplied host pattern, ignoring: debian-servers
+
+2019-11-13 00:58:05,220 p=24788 u=yd |  PLAY [debian-servers] ****************************************************************************************************
+2019-11-13 00:58:05,221 p=24788 u=yd |  skipping: no hosts matched
+2019-11-13 00:58:05,222 p=24788 u=yd |  PLAY RECAP ***************************************************************************************************************
+2019-11-13 00:58:05,223 p=24788 u=yd |  centos7                    : ok=3    changed=2    unreachable=0    failed=0   
+2019-11-13 00:58:05,224 p=24788 u=yd |  yd-ubuntu                  : ok=3    changed=2    unreachable=0    failed=0   
+2019-11-13 00:58:05,224 p=24788 u=yd |  ydBSD                      : ok=3    changed=2    unreachable=0    failed=0   
