@@ -1,8 +1,8 @@
 ---
-- name: Install nginx on different VM's
+- name: Install zip, unzip, gzip, nano on different VM's
   hosts: all
   roles:
-    - nginx
+    - zipnano_tags
 
 - hosts: ydBSD
   become:
@@ -14,7 +14,7 @@
   remote_user:
     yd
   roles:
-   - nginx
+   - zipnano_tags
 
 
 - hosts: centos7
@@ -27,7 +27,7 @@
   remote_user:
     yd
   roles:
-   - nginx
+   - zipnano_tags
 
 - hosts: yd-ubuntu
   become:
@@ -39,4 +39,4 @@
   remote_user:
     yd
   roles:
-   - nginx
+   - zipnano_tags

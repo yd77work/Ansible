@@ -1,0 +1,103 @@
+---
+
+- name: Install nginx CentOS
+  become: yes
+  become_method: sudo
+  yum: name=nginx state=present
+  when: ansible_os_family == "RedHat"
+  tags: install_centos
+
+- name: Install nginx Debian/Ubuntu
+  become: yes
+  become_method: sudo
+  apt: name=nginx state=present
+  when: ansible_os_family == "Debian"
+  tags: install_debian
+
+- name: Install nginx FreeBSD
+  become: yes
+  become_method: su
+  pkgng: name=nginx state=present
+  when: ansible_os_family == "FreeBSD"
+  tags: install_freebsd
+
+- name: Start nginx CentOS
+  become: yes
+  become_method: sudo
+  service:
+   name: nginx
+   state: started
+  when: ansible_os_family == "RedHat"
+  tags: start_nginx_centos
+
+- name: ReStart nginx CentOS
+  become: yes
+  become_method: sudo
+  service:
+   name: nginx
+   state: restarted
+  when: ansible_os_family == "RedHat"
+  tags: restart_nginx_centos
+
+- name: Stop nginx CentOS
+  become: yes
+  become_method: sudo
+  service:
+   name: nginx
+   state: stopped
+  when: ansible_os_family == "RedHat"
+  tags: stop_nginx_centos
+
+- name: Start nginx Debian/Ubuntu
+  become: yes
+  become_method: sudo
+  service:
+   name: nginx
+   state: started
+  when: ansible_os_family == "Debian"
+  tags: start_nginx_debian
+
+- name: ReStart nginx Debian/Ubuntu
+  become: yes
+  become_method: sudo
+  service:
+   name: nginx
+   state: restarted
+  when: ansible_os_family == "Debian"
+  tags: restart_nginx_debian
+
+- name: Stop nginx Debian/Ubuntu
+  become: yes
+  become_method: sudo
+  service:
+   name: nginx
+   state: stopped
+  when: ansible_os_family == "Debian"
+  tags: stop_nginx_debian
+
+- name: Start nginx FreeBSD
+  become: yes
+  become_method: su
+  service:
+   name: nginx
+   state: started
+  when: ansible_os_family == "FreeBSD"
+  tags: start_nginx_freebsd
+
+- name: ReStart nginx FreeBSD
+  become: yes
+  become_method: su
+  service:
+   name: nginx
+   state: restarted
+  when: ansible_os_family == "FreeBSD"
+  tags: restart_nginx_freebsd
+
+- name: Stop nginx FreeBSD
+  become: yes
+  become_method: su
+  service:
+   name: nginx
+   state: stopped
+  when: ansible_os_family == "FreeBSD"
+  tags: stop_nginx_freebsd

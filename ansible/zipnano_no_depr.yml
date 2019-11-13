@@ -4,7 +4,7 @@
   roles:
     - zipnano_no_depr
 
-- hosts: freebsd-servers
+- hosts: ydBSD
   become:
     true
   become_method:
@@ -17,11 +17,11 @@
    - zipnano_no_depr
 
 
-- hosts: redhat-servers
+- hosts: centos7
   become:
     true
   become_method:
-    su
+    sudo
   become_user:
     root
   remote_user:
@@ -29,7 +29,7 @@
   roles:
    - zipnano_no_depr
 
-- hosts: debian-servers
+- hosts: yd-ubuntu
   become:
     true
   become_method:
